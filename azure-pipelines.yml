@@ -20,3 +20,10 @@ steps:
       # Write your PowerShell commands here.
       
       Write-Host "Priya"
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'Free Trial(12fc5b53-fff0-4fa8-a751-d9e2b017e1b1)'
+    appType: 'webApp'
+    WebAppName: 'praticee'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
